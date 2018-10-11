@@ -1,0 +1,26 @@
+//this example is from chapter 3 on data structures
+//the function will take a start and end number and fill and return an array with all the numbers in between
+//my orginial funciton was close
+
+function range(start, end) {
+  let array = [];
+  for (let i = 0; start <= end; i++) {
+    array.push(i);
+  }
+  return array;
+}
+
+//I am so used to initializing the start variable with an integer, I forgot you could use another variable
+//this made is so my loop was starting before the actual start variable, which made it crash
+//this is the function with the correct loop
+
+function range(start, end) {
+  let array = [];
+  for (let i = start; i <= end; i++) {
+    array.push(i);
+  }
+  return array;
+}
+
+
+}

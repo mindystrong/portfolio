@@ -1,0 +1,45 @@
+//this example is from chapter 2
+//the function takes a string and counts the number of Bs
+//the output was an error
+
+function countBs(string) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+      if (i == string["B"]) {
+          count++;
+      }
+    }
+    return count;
+  }
+
+  //my original code didn't work. I tried to compare the elements in the loop in the wrong way.
+  //after some researching, I discovered the correct syntax
+
+function countBs(string) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] == "B") {
+          count++;
+      }
+    }
+    return count;
+  }
+
+  //the solution in the book was a bit different then what i had coded
+  //although the concept was the same, it takes any char as parameter
+
+  function countChar(string, ch) {
+    let counted = 0;
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] == ch) {
+        counted += 1;
+      }
+    }
+    return counted;
+  }
+  
+  function countBs(string) {
+    return countChar(string, "B");
+  }
+  
+

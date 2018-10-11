@@ -1,0 +1,27 @@
+//this exersize is from week 2 functions
+//this function takes two parameters and returns the minimum
+//below is my code which outputted the correct answers
+function min(x, y){
+  if (x < y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+console.log(min(0, 10));
+0
+console.log(min(0, -10));
+-10
+
+//below is the book solution
+function min(a, b) {
+    if (a < b) return a;
+    else return b;
+  }
+  
+  console.log(min(0, 10));
+  // → 0
+  console.log(min(0, -10));
+  // → -10
+
+  //I realized from this example that curly brackets are not required for if statements inside of functions
