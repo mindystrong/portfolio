@@ -1,2 +1,0 @@
-# portfolio
-Mobile App Dev

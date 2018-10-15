@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Summer| CSA Box</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Mindy Strong">
+    <meta name="description" content="Challenge #1">
+</head>
+
+<body>
+
+    <header>Summer</header>
+
+    <select id='list' multiple="yes" name="" value=''>
+        <option onclick='convert("onion")' value="onion">onion</option> 
+        <option onClick='add("carrot")' value="carrot">carrot</option> 
+        <option onClick='add("tomato")' value="tomato">tomato</option> 
+        <option onClick='add("celery")' value="celery">celery</option> 
+        <option onClick='add("apple")' value="apple">apple</option> 
+    </select>
+
+    <div id='result'>
+    </div>
+    
+
+    <button onclick='get()'>See Box</button>
+
+    <script>
+
+        //create product array
+        var products = [];
+
+        var createImage = function(src, title) {
+        var img = new Image();
+        img.src = src;
+        img.alt = title;
+        img.title = title;
+        return img; 
+        }
+
+        //convert value to image and add to product array
+        function convert(val) {
+            if (val="onion") {
+
+                //products.push(createImage("/images/summer.jpg", "onionpic"));
+                products.push("");
+                    //let x = document.createElement("img");
+                    //x.setAttribute("src", "/images/summer.jpg");
+                    //x.setAttribute("alt", "onion");
+                document.body.appendChild(products[0]);
+                    //products.push(x);
+                    //document.getElementById('result').appendChild("products");
+                    //document.getElementById('list').setAttribute('name', products)
+                    //console.dir(products[0]);
+                    
+                //document.getElementById('result').appendChild() products[0];
+                
+            }
+        
+        /*function add(x) {
+                products.push(x);
+                document.getElementById('result').innerHTML = products;
+                document.getElementById('list').setAttribute('name', products);
+        }*/
+        }
+
+        //display alert
+        function get() {
+            var result = document.getElementById('list');getAttribute('name');
+            alert(result);
+        }
+    </script>
+
+    <style>
+        #result {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+
+    </body>
+    </html>

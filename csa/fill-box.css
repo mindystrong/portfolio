@@ -1,0 +1,99 @@
+body {
+    background-image: url('/csa-images/box-background.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+    select {
+        display: block;
+        margin-left: auto;
+      margin-right: auto;
+      background: transparent;
+      width:300px;
+      height:200px;
+      border: 0px;
+      font-family: 'Nothing You Could Do', cursive;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 2000;
+      outline: none;
+      -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+      
+    }
+    
+    .hov
+{
+    width:100px;
+    height:100px;
+    background-color:red;
+}
+
+    option:hover {
+      
+        
+        font-size: 50px;
+        outline: none;
+        
+        background: transparent;
+        color: rgb(3, 3, 3);
+        -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+        
+    }
+    #pictureBox {
+      display: block;
+      width: 650px;
+      height: 391px;
+      
+      position: relative;
+
+      background-image:url('/csa-images/basket.png');
+      background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+
+    }
+    #resultBox {
+      position: center;
+      display: block;
+      width: 525px;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 30px;
+      padding-top: 35px;
+      padding-right: 10px;
+      padding-left: 30px;
+    }
+
+    @media only screen and (max-width: 500px) {
+    
+    #pictureBox {
+     
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      position: fill;
+      background-image:url('/csa-images/basket-1.png');
+      }
+
+    #resultBox {
+      margin-left: auto;
+      margin-right: auto;
+      position: center;
+      display: block;
+      width: 250px;
+      height: 450px;
+      padding-bottom: 5px;
+      
+    }
+  }

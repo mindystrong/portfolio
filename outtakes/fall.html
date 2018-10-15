@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Seasonal Produce | CSA Box</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Mindy Strong">
+    <meta name="description" content="Challenge #1">
+</head>
+
+<body>
+
+    <header>Seasons</header>
+    <h1 id="seasonheading"></h1>
+    <form>
+        <select id='producelist' multiple="yes"></select>
+    </form>
+
+    <div id='result'></div>
+    
+
+    <script>
+        //create arrays of produce
+        const spring = ["Apricots", "Artichokes", "Arugula", "Beets", "Carrots", "Kale", "Leeks", "Turnips"];
+        const summer = ["Raspberries", "Tomatoes", "Blackberrys", "Potatoes", "Cabbage", "Fig", "Peppers", "Cherries"];
+        const fall = ["Apples", "Eggplant", "Garlic", "Grapes", "Lemongrass", "Lettuce", "Pumpkin", "Zucchini"];
+        const winter = ["Cactus Pear", "Clementines", "Dates", "Grapefruit", "Oranges", "Pomegranate", "Tangerines"];
+
+        //loop through array and assign option tags
+        //create empty box
+        var box = [];
+        let text = "<ul>";
+        let i = 0;
+        for (i = 0; i < spring.length; i++) {
+            text += "<option>" + spring[i] + "</option>";
+            spring[i].onClick(box.push(i));
+            
+        }
+        text += "</ul>";
+        
+        //display option array elements
+        document.getElementById("producelist").innerHTML = text;
+        document.getElementById('result').innerHTML = box;
+        
+
+        //add value of array item to box and display box 
+        /*function add(val) {
+                box.push(val);
+                document.getElementById('result').innerHTML = box;
+            }*/
+
+    </script>
+
+    <style>
+    #result {
+        height:100px;
+        width:100px;
+        border:1px solid black;
+    }
+    </style>
+
+</body>
+
+</html>
