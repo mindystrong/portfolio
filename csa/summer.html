@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="fill-box.css">
   <meta charset="utf-8">
   <title>Summer | CSA Box</title>
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="Mindy Strong">
-  <meta name="description" content="Challenge #1">
+  <meta name="description" content="CSA Summer Options">
 </head>
 
-<body onload="createSummerOptions()"></body>
+<body onload="createOptions('summer')"></body>
 
 <script src="fill-box.js"></script>
 
 <div id = "pictureBox">
- 
+
   <div id= "resultBox"></div>
-  </div>
-  
+</div>
 
-    <select id='list' multiple="true" name="" value=''>
-    </select>
-
-</body>
+    <div id = "sticky">
+    <div id='list' multiple="true" name="" value=''>
+    </div>
+</div>
+    <button onclick="showPrice()">Checkout</button>
 
 </html>

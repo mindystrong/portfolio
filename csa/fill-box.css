@@ -8,58 +8,50 @@ body {
     background-attachment: fixed;
   }
   
-    select {
-        display: block;
-        margin-left: auto;
+#list {
+    
+      margin-left: auto;
       margin-right: auto;
-      background: transparent;
-      width:300px;
-      height:200px;
-      border: 0px;
       font-family: 'Nothing You Could Do', cursive;
       text-align: center;
-      font-size: 25px;
-      font-weight: 2000;
+      padding-top: 70px;    
       outline: none;
-      -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-      
     }
     
-    .hov
-{
-    width:100px;
-    height:100px;
-    background-color:red;
-}
+   button {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 20px;
+    outline: none;
+    background: whitesmoke;
+    color: rgb(3, 3, 3);  
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+   }
 
-    option:hover {
-      
-        
-        font-size: 50px;
-        outline: none;
-        
-        background: transparent;
-        color: rgb(3, 3, 3);
-        -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-        
+    button:hover {
+      font-size: 25px; 
+      outline: none;
+      color: rgb(3, 3, 3);
+      text-decoration: underline;
     }
+
+    button::before {
+      content: url(/csa-images/checkmark.png);
+      
+    }
+
     #pictureBox {
       display: block;
       width: 650px;
       height: 391px;
-      
       position: relative;
-
       background-image:url('/csa-images/basket.png');
       background-position: center;
-    background-repeat: no-repeat;
-    background-size: fill;
-
+      background-repeat: no-repeat;
+      background-size: fill;
     }
+
     #resultBox {
       position: center;
       display: block;
@@ -76,7 +68,6 @@ body {
     @media only screen and (max-width: 500px) {
     
     #pictureBox {
-     
       display: block;
       width: 100%;
       height: auto;
@@ -94,6 +85,5 @@ body {
       width: 250px;
       height: 450px;
       padding-bottom: 5px;
-      
-    }
+    } 
   }
