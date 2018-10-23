@@ -9,7 +9,7 @@ body {
   }
   
 #list {
-    
+      display: block;
       margin-left: auto;
       margin-right: auto;
       font-family: 'Nothing You Could Do', cursive;
@@ -47,7 +47,7 @@ body {
       width: 650px;
       height: 391px;
       position: relative;
-      background-image:url('/portfolio/csa/csa-images/basket.png');
+      background-image:url('/csa/csa-images/basket.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: fill;
@@ -75,7 +75,7 @@ body {
       margin-left: auto;
       margin-right: auto;
       position: fill;
-      background-image:url('/portfolio/csa/csa-images/basket-1.png');
+      background-image:url('/csa/csa-images/basket-1.png');
       }
 
     #resultBox {
