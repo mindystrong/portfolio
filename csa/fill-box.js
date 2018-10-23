@@ -1,6 +1,6 @@
 const produceList = [{
         name: "onion",
-        imgsrc: "/csa/csa-images/onion-pic.png",
+        imgsrc: "/portfolio/csa/csa-images/onion-pic.png",
         availability: ["summer", "winter", "fall"],
         price: 2,
         markets: "",
