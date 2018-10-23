@@ -126,7 +126,7 @@ function createOptions(season) {
             let image = produceList[i].imgsrc;
             let price = produceList[i].price;
 
-            let veggie = document.createElement("option");
+            let veggie = document.createElement("button");
             veggie.textContent = name;
             veggie.value = name;
             veggie.id = name;
