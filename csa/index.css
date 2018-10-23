@@ -9,7 +9,7 @@ h1 {
   }
 
   body {
-    background-image: url('/portfolio/csa/csa-images/background-table.jpg');
+    background-image: url('csa-images/background-table.jpg');
     background-color: #cccccc;
     height: 500px;
     background-position: center;
