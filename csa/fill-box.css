@@ -1,6 +1,6 @@
 body {
-    /* background-image: url('csa-images/box-background.jpg'); */
-    background-color: blue;
+    background-image: url('csa-images/box-background.jpg');
+    background-color:white;
     height: 500px;
     background-position: center;
     background-repeat: repeat;
