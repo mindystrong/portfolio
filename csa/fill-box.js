@@ -27,107 +27,87 @@ const produceList = [{
         markets: ""
     },
     {
-        name: "beets"
-        imgsrc: 
-        availability: ["winter", "fall"]
-        price:
+        name: "beets",
+        imgsrc: "",
+        availability: ["winter", "fall"],
+        price: 1,
         markets:""
     },
     {
-        name: "apricots"
-        imgsrc:
-        availability: ["spring"]
-        price:
+        name: "apricots",
+        imgsrc: "",
+        availability: ["spring"],
+        price: 1,
         markets:""
     },
     {
-        name: "grapefruit"
-        imgsrc:
-        availability: ["winter"]
-        price:
+        name: "grapefruit",
+        imgsrc: "",
+        availability: ["winter"],
+        price: 2,
         markets:""
     },
     {
-        name: "kiwi"
-        imgsrc:
-        availability: ["winter", "summer"]
-        price:
+        name: "kiwi",
+        imgsrc: "",
+        availability: ["winter", "summer"],
+        price: 1,
         markets:""
     },
     {
-        name: "pumpkin"
-        imgsrc:
-        availability: ["winter", "fall"]
-        price:
+        name: "pumpkin",
+        imgsrc: "",
+        availability: ["winter", "fall"],
+        price: 5,
         markets:""
     },
     {
-        name: "broccoli"
-        imgsrc:
-        availability: ["spring", "fall"]
-        price:
+        name: "broccoli",
+        imgsrc: "",
+        availability: ["spring", "fall"],
+        price: 1,
         markets:""
     },
     {
-        name: "avocado"
-        imgsrc:
-        availability: ["summer"]
-        price:
+        name: "avocado",
+        imgsrc: "",
+        availability: ["summer"],
+        price: 2,
         markets:""
     },
     {
-        name: "apple"
-        imgsrc:
-        availability: ["summer"]
-        price:
+        name: "apple",
+        imgsrc: "",
+        availability: ["summer"],
+        price: 1,
         markets:""
     },
     {
-        name: "potato"
-        imgsrc:
-        availability: ["fall", "winter"]
-        price:
+        name: "potato",
+        imgsrc: "",
+        availability: ["fall", "winter"],
+        price: 1,
         markets:""
     },
     {
-        name: "pear"
-        imgsrc:
-        availability: ["winter", "fall"]
+        name: "pear",
+        imgsrc: "",
+        availability: ["winter", "fall"],
+        price: 1,
         markets:""
     },
     {
-        name: "kale"
-        imgsrc:
-        availability: ["fall"]
-        price:
+        name: "kale",
+        imgsrc: "",
+        availability: ["fall"],
+        price: 1,
         markets:""
     },
     {
-        name:
-        imgsrc:
-        availability:
-        price:
-        markets:""
-    },
-    {
-        name:
-        imgsrc:
-        availability:
-        price:
-        markets:""
-    },
-    {
-        name:
-        imgsrc:
-        availability:
-        price:
-        markets:""
-    },
-    {
-        name:
-        imgsrc:
-        availability:
-        price:
+        name: "",
+        imgsrc: "",
+        availability: "",
+        price: "",
         markets:""
     },
 ];
@@ -146,14 +126,14 @@ function createOptions(season) {
             let image = produceList[i].imgsrc;
             let price = produceList[i].price;
 
-            let produceBtn = document.createElement("button");
-            produceBtn.textContent = name;
-            produceBtn.value = name;
-            produceBtn.id = name;
-            produceBtn.setAttribute("data-price", price);
+            let veggie = document.createElement("button");
+            veggie.textContent = name;
+            veggie.value = name;
+            veggie.id = name;
+            veggie.setAttribute("data-price", price);
 
             //create and set new img element and add to box onclick
-            produceBtn.onclick = function convert() {
+            veggie.onclick = function convert() {
 
                 let x = document.createElement("img");
                 x.setAttribute("src", image);
@@ -163,16 +143,21 @@ function createOptions(season) {
                     box.push(x);
                     cart.push({price, name});
                 }
+                else {
+                 window.alert("Sorry, your box is full");
+                }
+                
                 //display box in resultBox div
                 for (let j = 0; j < box.length; j++) {
                     document.getElementById('resultBox').appendChild(box[j]);
                 
                 } 
             }   
-            selectlist.appendChild(produceBtn);
+            selectlist.appendChild(veggie);
         }    
     }   
 }
+
 
 //get sum of prices array
 function addSum() {
@@ -187,7 +172,6 @@ function addSum() {
  function showPrice() {
     let checkout = addSum();
     window.alert(checkout);
-
 }
 
 
