@@ -30,17 +30,17 @@ body {
     margin-right: 5px;
    }
 
-    button:hover {
+    /* button:hover {
       font-size: 25px; 
       outline: none;
       color: rgb(3, 3, 3);
       text-decoration: underline;
-    }
+    } */
 
-    button::before {
+    /* button::before {
       content: url(/csa/csa-images/checkmark.png);
       
-    }
+    } */
 
     #pictureBox {
       display: block;
