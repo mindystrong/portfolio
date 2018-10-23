@@ -13,9 +13,10 @@ body {
       margin-left: auto;
       margin-right: auto;
       font-family: 'Nothing You Could Do', cursive;
-      text-align: center;
-      padding-top: 70px;    
+      text-align: center;   
       outline: none;
+      border-radius: 7px;
+      font-size: 20px;
     }
     
    button {
@@ -37,7 +38,7 @@ body {
     }
 
     button::before {
-      content: url(/csa-images/checkmark.png);
+      content: url(/csa/csa-images/checkmark.png);
       
     }
 
@@ -46,7 +47,7 @@ body {
       width: 650px;
       height: 391px;
       position: relative;
-      background-image:url('/csa-images/basket.png');
+      background-image:url('/csa/csa-images/basket.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: fill;
@@ -74,7 +75,7 @@ body {
       margin-left: auto;
       margin-right: auto;
       position: fill;
-      background-image:url('/csa-images/basket-1.png');
+      background-image:url('/csa/csa-images/basket-1.png');
       }
 
     #resultBox {

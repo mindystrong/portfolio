@@ -1,6 +1,6 @@
 const produceList = [{
         name: "onion",
-        imgsrc: "/csa-images/onion-pic.png",
+        imgsrc: "/csa/csa-images/onion-pic.png",
         availability: ["summer", "winter", "fall"],
         price: 2,
         markets: "",
@@ -126,7 +126,7 @@ function createOptions(season) {
             let image = produceList[i].imgsrc;
             let price = produceList[i].price;
 
-            let veggie = document.createElement("button");
+            let veggie = document.createElement("option");
             veggie.textContent = name;
             veggie.value = name;
             veggie.id = name;
