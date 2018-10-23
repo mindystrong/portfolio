@@ -7,21 +7,21 @@ const produceList = [{
     },
     {
         name: "corn",
-        imgsrc: "/csa-images/corn-pic.png",
+        imgsrc: "csa-images/corn-pic.png",
         availability: ["summer"],
         price: 2,
         markets: ""
     },
     {
         name: "tomato",
-        imgsrc: "/csa-images/tomato-pic.png",
+        imgsrc: "csa-images/tomato-pic.png",
         availability: ["summer"],
         price: 1,
         markets: ""
     },
     {
         name: "spinach",
-        imgsrc: "/csa-images/spinach-pic.png",
+        imgsrc: "csa-images/spinach-pic.png",
         availability: ["winter"],
         price: 1,
         markets: ""
