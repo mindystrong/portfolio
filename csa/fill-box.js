@@ -158,7 +158,6 @@ function createOptions(season) {
     }   
 }
 
-
 //get sum of prices array
 function addSum() {
     let sum = 0;
@@ -174,6 +173,12 @@ function addSum() {
     window.alert(checkout);
 }
 
+function deleteProduce() {
+    box.pop();
+    document.getElementById('resultBox').removeChild(box.pop());
+}
+
+    
 
 
 
