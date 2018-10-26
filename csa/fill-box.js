@@ -150,7 +150,6 @@ function createOptions(season) {
                 //display box in resultBox div
                 for (let j = 0; j < box.length; j++) {
                     document.getElementById('resultBox').appendChild(box[j]);
-                
                 } 
             }   
             selectlist.appendChild(veggie);
@@ -173,10 +172,16 @@ function addSum() {
     window.alert(checkout);
 }
 
+//
 function deleteProduce() {
-    box.pop();
-    document.getElementById('resultBox').removeChild(box.pop());
+   box.pop();
+   cart.pop();
+   var list = document.getElementById('resultBox');
+   list.removeChild(list.childNodes[0]);
 }
+
+//
+
 
     
 
