@@ -176,8 +176,8 @@ function addSum() {
 function deleteProduce() {
    box.pop();
    cart.pop();
-   var list = document.getElementById('resultBox');
-   list.removeChild(list.childNodes[0]);
+   let list = document.getElementById('resultBox');
+   list.removeChild(list.childNodes[box.length]);
 }
 
 //
