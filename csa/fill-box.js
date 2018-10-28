@@ -3,112 +3,90 @@ const produceList = [{
         imgsrc: "csa-images/onion-pic.png",
         availability: ["summer", "winter", "fall"],
         price: 2,
-        markets: "",
     },
     {
         name: "corn",
         imgsrc: "csa-images/corn-pic.png",
         availability: ["summer"],
         price: 2,
-        markets: ""
     },
     {
         name: "tomato",
         imgsrc: "csa-images/tomato-pic.png",
         availability: ["summer"],
         price: 1,
-        markets: ""
     },
     {
         name: "spinach",
         imgsrc: "csa-images/spinach-pic.png",
         availability: ["winter"],
         price: 1,
-        markets: ""
     },
     {
         name: "beets",
-        imgsrc: "",
+        imgsrc: "csa-images/beet-pic.png",
         availability: ["winter", "fall"],
         price: 1,
-        markets:""
     },
     {
         name: "apricots",
-        imgsrc: "",
+        imgsrc: "csa-images/apricot-pic.png",
         availability: ["spring"],
         price: 1,
-        markets:""
     },
     {
         name: "grapefruit",
-        imgsrc: "",
-        availability: ["winter"],
+        imgsrc: "csa-images/grapefruit-pic.png",
+        availability: ["winter", "spring"],
         price: 2,
-        markets:""
     },
     {
         name: "kiwi",
-        imgsrc: "",
+        imgsrc: "csa-images/kiwi-pic.png",
         availability: ["winter", "summer"],
         price: 1,
-        markets:""
     },
     {
         name: "pumpkin",
-        imgsrc: "",
+        imgsrc: "csa-images/pumpkin-pic.png",
         availability: ["winter", "fall"],
         price: 5,
-        markets:""
     },
     {
         name: "broccoli",
-        imgsrc: "",
-        availability: ["spring", "fall"],
+        imgsrc: "csa-images/broccoli-pic.png",
+        availability: ["spring", "fall", "spring"],
         price: 1,
-        markets:""
     },
     {
         name: "avocado",
-        imgsrc: "",
-        availability: ["summer"],
+        imgsrc: "csa-images/avocado-pic.png",
+        availability: ["summer", "spring"],
         price: 2,
-        markets:""
     },
     {
         name: "apple",
-        imgsrc: "",
-        availability: ["summer"],
+        imgsrc: "csa-images/apple-pic.png",
+        availability: ["summer", "spring"],
         price: 1,
-        markets:""
     },
     {
         name: "potato",
-        imgsrc: "",
+        imgsrc: "csa-images/potato-pic.png",
         availability: ["fall", "winter"],
         price: 1,
-        markets:""
     },
     {
         name: "pear",
-        imgsrc: "",
+        imgsrc: "csa-images/pear-pic.png",
         availability: ["winter", "fall"],
         price: 1,
-        markets:""
     },
     {
         name: "kale",
-        imgsrc: "",
-        availability: ["fall"],
+        imgsrc: "csa-images/kale-pic.png",
+        availability: ["fall", "spring"],
         price: 1,
-        markets:""
-    },
-    {
-        name: "",
-        imgsrc: "",
-        availability: "",
-        price: "",
-        markets:""
     },
 ];
 
@@ -172,7 +150,7 @@ function addSum() {
     window.alert(checkout);
 }
 
-//
+//remove produce in array and remove image elements
 function deleteProduce() {
    box.pop();
    cart.pop();
@@ -180,7 +158,7 @@ function deleteProduce() {
    list.removeChild(list.childNodes[box.length]);
 }
 
-//
+
 
 
     
