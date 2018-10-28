@@ -86,7 +86,7 @@ const produceList = [{
         name: "kale",
         imgsrc: "csa-images/kale-pic.png",
         availability: ["fall", "spring"],
-        price: 1,
+        price: 1,  
     },
 ];
 
