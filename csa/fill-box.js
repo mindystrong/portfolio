@@ -147,7 +147,7 @@ function addSum() {
 //window alert sum
  function showPrice() {
     let checkout = addSum();
-    window.alert(checkout);
+    window.alert("Your total is $" + checkout);
 }
 
 //remove produce in array and remove image elements
