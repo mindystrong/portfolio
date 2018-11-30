@@ -26,7 +26,7 @@ function loadJSON() {
       }
 
       function createProduceOptions() {
-        //grab season and zone select list values
+        //grab season and zone user selection values
         let currentZone = document.getElementById("zoneList").value;
         let currentSeason = document.getElementById("seasonList").value;
 
@@ -49,10 +49,14 @@ function loadJSON() {
       plantNow.addEventListener('click', renderProduceInfo);
 
       function renderProduceInfo() {
+        //get the value of the current produce user selection
         let currentProduce = document.getElementById('produceList').value;
+        //match user selection with produce name
         for (let k = 0; k < data.produce.length; k++) {
           if (data.produce[k].name == currentProduce) {
+            //grab unordered list element from HTML
             let produceList = document.getElementById('plantResults');
+            //create list item and display produce info
             const item = document.createElement('li');
             item.innerHTML = ` 
             <h2>Plant in _____ days!</h2>
@@ -89,8 +93,6 @@ function getTodayDayOfYear() {
 
 //returns the day of year the produce should be planted
 function getPlantDayOfYear() {
-  let plantFrost = renderProduceInfo();
-console.log(plantFrost);
   // return (data.zone.frost + data.produce.frost);
 }
 
