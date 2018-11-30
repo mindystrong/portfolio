@@ -52,12 +52,22 @@ function loadJSON() {
         let currentProduce = document.getElementById('produceList').value;
         for (let k = 0; k < data.produce.length; k++) {
           if (data.produce[k].name == currentProduce) {
-            const item = document.createElement('ul');
-            item.innerHTML = `
-          <li>${data.produce[k].name}</li>
-           <li>${data.produce[k].frost}</li>
-          `;
+            let produceList = document.getElementById('plantResults');
+            const item = document.createElement('li');
+            item.innerHTML = ` 
+            <h2>Plant in _____ days!</h2>
+            <p>Produce: ${data.produce[k].name}</p>
+            <p>Environment: ${data.produce[k].environment}</p>
+            <p>Sun Exposure: ${data.produce[k].sunExposure}</p>
+            <p>Soil Type: ${data.produce[k].soilType}</p>
+            <p>Soil pH: ${data.produce[k].soilpH}</p>
+            `;
+            produceList.appendChild(item);
+            
+
+            
           }
+          
         }
       }
     }
@@ -79,11 +89,13 @@ function getTodayDayOfYear() {
 
 //returns the day of year the produce should be planted
 function getPlantDayOfYear() {
+  let plantFrost = renderProduceInfo();
+console.log(plantFrost);
   // return (data.zone.frost + data.produce.frost);
 }
 
 //returns how many days until you can plant
-function getDayDifference() {
+function getDaysUntilPlant() {
   getTodayDayOfYear() = today;
   getPlantDayOfYear() = plantDay;
   if (plantDay < today) {

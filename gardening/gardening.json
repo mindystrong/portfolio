@@ -64,7 +64,7 @@
         "environment": "indoors",
         "plantType": "vegetable",
         "sunExposure": "full",
-        "soilType": ["loamy", "sandy"],
+        "soilType": ["loamy, sandy"],
         "soilpH": "neutral",
         "season": ["Spring", "Fall"]
     }
