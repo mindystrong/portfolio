@@ -1,36 +1,23 @@
 { "zones":[
     {
-    "1": {"month": "6", "day": "30"} 
+    "name": "1",
+    "frost": "186"
     },
     {
-    "2": {"month": "5", "day": "31"}
+    "name": "2",
+    "frost": "300"
     }, 
     {
-    "3": {"month": "5", "day": "15"}
+    "name": "3",
+    "frost": "60"
     },
     {
-    "4": {"month": "4", "day": "30"}
+    "name": "4",
+    "frost": "100"
     },
     {
-    "5": {"month": "4", "day": "15"}
-    },
-    {
-    "6": {"month": "3", "day": "30"}
-    },
-    {
-    "7": {"month": "3", "day": "15"}
-    },
-    {
-    "8": {"month": "2", "day": "28"}
-    },
-    {
-    "9": {"month": "1", "day": "30"}
-    },
-    {
-    "10": {"month": "4", "day": "6"}
-    },
-    {
-    "11": {"month": "4", "day": "6"}
+    "name": "5",
+    "frost": "70"
     }
 ],
 
@@ -48,7 +35,7 @@
     },
     {
         "name": "brussel sprouts",
-        "frost": "14",
+        "frost": "20",
         "zone": ["2", "3", "4", "5", "6", "7", "8", "9", "10"],
         "environment": "indoors",
         "plant type": "vegetable",
@@ -59,7 +46,7 @@
     },
     {
         "name": "cabbage",
-        "frost": ["-2", "-3"],
+        "frost": "5",
         "zone": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
         "environment": "indoors",
         "plantType": "vegetable",
