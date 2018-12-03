@@ -1,59 +1,329 @@
-{ "zones":[
-    {
-    "name": "1",
-    "frost": "186"
-    },
-    {
-    "name": "2",
-    "frost": "300"
-    }, 
-    {
-    "name": "3",
-    "frost": "60"
-    },
-    {
-    "name": "4",
-    "frost": "100"
-    },
-    {
-    "name": "5",
-    "frost": "70"
-    }
-],
+{
+    "zones": [{
+            "name": "1",
+            "frost": "181"
+        },
+        {
+            "name": "2",
+            "frost": "151"
+        },
+        {
+            "name": "3",
+            "frost": "135"
+        },
+        {
+            "name": "4",
+            "frost": "120"
+        },
+        {
+            "name": "5",
+            "frost": "105"
+        },
+        {
+            "name": "6",
+            "frost": "74"
+        },
+        {
+            "name": "7",
+            "frost": "59"
+        },
+        {
+            "name": "8",
+            "frost": ""
+        },
+        {
+            "name": "9",
+            "frost": "30"
+        },
+        {
+            "name": "10",
+            "frost": ""
+        },
+        {
+            "name": "11",
+            "frost": ""
+        }
+    ],
 
-"produce":[
-    {
-        "name": "brocolli",
-        "frost": "14",
-        "zone": ["3", "4", "5", "6", "7", "8", "9", "10"],
-        "environment": "indoors",
-        "plant type": "vegetable",
-        "sunExposure": "full",
-        "soilType": "sandy",
-        "soilpH": "slightly acidic to neutral",
-        "season": ["Spring", "Fall"]
-    },
-    {
-        "name": "brussel sprouts",
-        "frost": "20",
-        "zone": ["2", "3", "4", "5", "6", "7", "8", "9", "10"],
-        "environment": "indoors",
-        "plant type": "vegetable",
-        "sunExposure": "full",
-        "soilType": "any",
-        "soilpH": "neutral",
-        "season": ["Fall"]
-    },
-    {
-        "name": "cabbage",
-        "frost": "5",
-        "zone": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "environment": "indoors",
-        "plantType": "vegetable",
-        "sunExposure": "full",
-        "soilType": ["loamy, sandy"],
-        "soilpH": "neutral",
-        "season": ["Spring", "Fall"]
-    }
-]
+    "produce": [{
+            "name": "brocolli",
+            "frost": "-21",
+            "zone": ["3", "4", "5", "6", "7", "8", "9", "10"],
+            "environment": "indoors",
+            "plant type": "vegetable",
+            "sunExposure": "full",
+            "soilType": "sandy",
+            "soilpH": "slightly acidic to neutral",
+            "season": ["Spring", "Fall"],
+            "friends": "",
+            "foes": "",
+            "distance": "12 to 24 inches apart with 36 inches between each row"
+        },
+        {
+            "name": "brussel sprouts",
+            "frost": "-56",
+            "zone": ["2", "3", "4", "5", "6", "7", "8", "9", "10"],
+            "environment": "indoors",
+            "plant type": "vegetable",
+            "sunExposure": "full",
+            "soilType": "any",
+            "soilpH": "neutral",
+            "season": ["Fall"],
+            "friends": "",
+            "foes": "",
+            "distance": "12-24 inches apart"
+        },
+        {
+            "name": "cabbage",
+            "frost": "-56",
+            "zone": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+            "environment": "indoors",
+            "plantType": "vegetable",
+            "sunExposure": "full",
+            "soilType": "loamy, sandy",
+            "soilpH": "neutral",
+            "season": ["Spring", "Fall"],
+            "friends": "beans, cucumbers",
+            "foes": "broccoli, cauliflower, strawberries, tomatoes",
+            "distance": "12-24 inches apart in rows"     
+        },
+        {
+            "name": "lettuce",
+            "frost": "-43",
+            "zone": ["4", "5", "6", "7", "8", "9"],
+            "environment": "indoors",
+            "plantType": "vegetable",
+            "sunExposure": "Part Sun",
+            "soilType": "loamy",
+            "soilpH": "",
+            "season": ["Spring", "Fall"],
+            "friends": "chives. garlic",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "bell peppers",
+            "frost": "-70",
+            "zone": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+            "environment": "indoors",
+            "plantType": "vegetable",
+            "sunExposure": "full sun",
+            "soilType": "loamy",
+            "soilpH": "neutral",
+            "season": ["Summer", "Spring"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "pumpkin",
+            "frost": "-21",
+            "zone": ["3", "4","5","6","7","8","9"],
+            "environment": "indoors",
+            "plantType": "vegetable",
+            "sunExposure": "full",
+            "soilType": "any",
+            "soilpH": "",
+            "season": ["Summer", "Spring"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "tomatoes",
+            "frost": "-28",
+            "zone": ["2","3","4","5","6","7","8","9","10"],
+            "environment": "indoors",
+            "plantType": "vegetable",
+            "sunExposure": "full",
+            "soilType": "loamy",
+            "soilpH": "acidic",
+            "season": ["Spring"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "watermelon",
+            "frost": "14",
+            "zone": ["3","4","5","6","7","8","9","10","11"],
+            "environment": "indoors",
+            "plantType": "fruit",
+            "sunExposure": "full",
+            "soilType": "sandy",
+            "soilpH": "",
+            "season": ["Summer"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "beets",
+            "frost": "",
+            "zone": ["2","3","4","5","6","7","8","9","10"],
+            "environment": "outdoors",
+            "plantType": "vegetable",
+            "sunExposure": "full, part",
+            "soilType": "loamy, sandy",
+            "soilpH": "neutral",
+            "season": ["Spring","Summer"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "carrots",
+            "frost": "-28",
+            "zone": ["4","5","6","7","8","9","10"],
+            "environment": "outdoors",
+            "plantType": "vegetable",
+            "sunExposure": "full",
+            "soilType": "sandy",
+            "soilpH": "neutral",
+            "season": ["Spring","Fall"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "corn",
+            "frost": "14",
+            "zone": ["4","5","6","7","8"],
+            "environment": "outdoor",
+            "plantType": "vegetable",
+            "sunExposure": "full",
+            "soilType": "loamy",
+            "soilpH": "neutral",
+            "season": ["Spring"],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        },
+        {
+            "name": "",
+            "frost": "",
+            "zone": [""],
+            "environment": "",
+            "plantType": "",
+            "sunExposure": "",
+            "soilType": "",
+            "soilpH": "",
+            "season": [""],
+            "friends": "",
+            "foes": "",
+            "distance": ""     
+        }
+    ]
 }

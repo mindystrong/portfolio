@@ -6,7 +6,7 @@ function loadJSON() {
   const request = new XMLHttpRequest();
   request.open('GET', url, true);
 
-  request.onload = function createZoneOptions(zoneFrost) {
+  request.onload = function createZoneOptions() {
 
     //parse data from JSON file
     if (request.status === 200) {
@@ -51,6 +51,13 @@ function loadJSON() {
       plantNow.addEventListener('click', renderProduceInfo);
 
       function renderProduceInfo(plantFrost) {
+
+        //remove previous produce list item
+        var root = document.getElementById("plantResults");
+        while (plantResults.firstChild) {
+          root.removeChild(plantResults.firstChild);
+        }
+
         //get the value of the current produce user selection
         let currentProduce = document.getElementById('produceList').value;
         //match user selection with produce name
@@ -70,7 +77,6 @@ function loadJSON() {
             <p>Soil pH: ${data.produce[k].soilpH}</p>
             `;
             produceList.appendChild(item);
-
           }
 
           function getDaysUntilPlant() {
@@ -114,13 +120,13 @@ function loadJSON() {
 
 
 // //returns today's day of year from 1-365
-// function getTodayDayOfYear() {
-//   var now = new Date();
-//   var start = new Date(now.getFullYear(), 0, 0);
-//   var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-//   var oneDay = 1000 * 60 * 60 * 24;
-//   var day = Math.floor(diff / oneDay);
-//   return day;
+//function TodayDayOfYear() {
+//var now = new Date();
+//var start = new Date(now.getFullYear(), 0, 0);
+// var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+// var oneDay = 1000 * 60 * 60 * 24;
+// var day = Math.floor(diff / oneDay);
+// return day;
 
 // }
 
