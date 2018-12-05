@@ -1,3 +1,4 @@
+let myGarden = [];
 function loadJSON() {
 
   const url = 'gardening.json';
@@ -7,7 +8,7 @@ function loadJSON() {
   request.open('GET', url, true);
 
   request.onload = function createZoneOptions() {
-    let myGarden = [];
+    
     //parse data from JSON file
     if (request.status === 200) {
       const data = JSON.parse(request.responseText);
@@ -90,21 +91,24 @@ function loadJSON() {
             //add produce item to garden array onclick
             btn.onclick = function alert(){
               //push produce into myGarden array
-              myGarden.push(data.produce[k]);
+              myGarden.push(item);
               window.alert(data.produce[k].name + ' is added to your garden');
+              console.log(myGarden); 
             }                              
             document.body.appendChild(btn); 
-            console.log(myGarden); 
+            
 
             var showGarden = document.createElement("BUTTON");       
-            var gardenText = document.createTextNode("Add to my Garden"); 
+            var gardenText = document.createTextNode("Visit myGarden!"); 
             showGarden.setAttribute("Id", "showGarden")      
             showGarden.appendChild(gardenText);  
             //add produce item to garden array onclick
-            showGarden.onclick = function showMyGarden(){
-            window.location='http://www.mindystrong.github.io/portfolio/gardening/results.html';
+            showGarden.onclick = function displayGarde() {
+          window.location='https://mindystrong.github.io/portfolio/gardening/results.html';
             }                              
-            document.body.appendChild(showGarden); 
+            document.body.appendChild(showGarden);
+           // showGarden.addEventListener('click', displayGarden);
+           
           }
 
           function getDaysUntilPlant() {
@@ -145,6 +149,21 @@ function loadJSON() {
   request.send();
 }
 
+
+
+function displayGarden() {
+  console.log('hi');
+  let gardenList = document.getElementById('myGardenResults');
+  for (let i = 0; i < myGarden.length; i++) {
+    
+    let x = myGarden[i];
+    console.log(x);
+    gardenList.appendChild(x);   
+
+  } 
+  localStorage.setItem("myGarden", JSON.stringify(myGarden));
+ 
+}
 
 
 // //returns today's day of year from 1-365
