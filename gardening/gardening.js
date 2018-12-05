@@ -1,4 +1,5 @@
 let myGarden = [];
+
 function loadJSON() {
 
   const url = 'gardening.json';
@@ -8,7 +9,7 @@ function loadJSON() {
   request.open('GET', url, true);
 
   request.onload = function createZoneOptions() {
-    
+
     //parse data from JSON file
     if (request.status === 200) {
       const data = JSON.parse(request.responseText);
@@ -52,7 +53,7 @@ function loadJSON() {
       plantNow.addEventListener('click', renderProduceInfo);
 
       function renderProduceInfo(plantFrost) {
-       
+
         //remove previous produce list item
         var root = document.getElementById("plantResults");
         while (root.firstChild) {
@@ -65,10 +66,10 @@ function loadJSON() {
           var y = document.getElementById("showGarden");
           y.remove(y.selectedIndex);
 
-          
+
         }
-        
-        
+
+
         //get the value of the current produce user selection
         let currentProduce = document.getElementById('produceList').value;
         //match user selection with produce name
@@ -90,28 +91,28 @@ function loadJSON() {
             produceList.appendChild(item);
 
             //create add to garden button
-            var btn = document.createElement("BUTTON");       
-            var t = document.createTextNode("Add to my Garden"); 
-            btn.setAttribute("Id", "gardenBtn")      
-            btn.appendChild(t);  
+            var btn = document.createElement("BUTTON");
+            var t = document.createTextNode("Add to myGarden!");
+            btn.setAttribute("Id", "gardenBtn")
+            btn.appendChild(t);
             //add produce item to garden array onclick
-            btn.onclick = function alert(){
+            btn.onclick = function alert() {
               //push produce into myGarden array
               myGarden.push(item);
               window.alert(data.produce[k].name + ' is added to your garden');
-              console.log(myGarden); 
-            }                              
-            document.body.appendChild(btn); 
-            
+              console.log(myGarden);
+            }
+            document.body.appendChild(btn);
 
-            var showGarden = document.createElement("BUTTON");       
-            var gardenText = document.createTextNode("Visit myGarden!"); 
-            showGarden.setAttribute("Id", "showGarden")      
-            showGarden.appendChild(gardenText);  
+
+            var showGarden = document.createElement("BUTTON");
+            var gardenText = document.createTextNode("Visit myGarden!");
+            showGarden.setAttribute("Id", "showGarden")
+            showGarden.appendChild(gardenText);
             //display garden onclick                        
             document.body.appendChild(showGarden);
-           showGarden.addEventListener('click', displayGarden);
-           
+            showGarden.addEventListener('click', displayGarden);
+
           }
 
           function getDaysUntilPlant() {
@@ -157,67 +158,72 @@ function loadJSON() {
 
 
 function displayGarden() {
-  
- 
+//remove existing plantNow! result
   var roo = document.getElementById("plantResults");
-        while (roo.firstChild) {
-          roo.removeChild(plantResults.firstChild);
-        }
-  document.getElementById("myGardenResults").classList.remove('hide');   
+  while (roo.firstChild) {
+    roo.removeChild(plantResults.firstChild);
+  }
+  //hide myGarden! results
+  document.getElementById("myGardenResults").classList.remove('hide');
+
+  //remove existing visit myGarden! button
   var y = document.getElementById("showGarden");
-          y.remove(y.selectedIndex);
-          var r = document.getElementById("gardenBtn");
-          r.remove(r.selectedIndex);
+  y.remove(y.selectedIndex);
+
+  //remove existing add to myGarden! button
+  var r = document.getElementById("gardenBtn");
+  r.remove(r.selectedIndex);
+
   //hide all existing elements on page 
   document.getElementById('zone').classList.add('hide');
-  //document.getElementById('plantResults').classList.add('hide');
+
+  //populate myGarden! 
   let gardenList = document.getElementById('myGardenResults');
   for (let i = 0; i < myGarden.length; i++) {
     let x = myGarden[i];
     console.log(x);
-    gardenList.appendChild(x);   
-  } 
-  
-   let backBtn = document.createElement("BUTTON");       
-            let btnText = document.createTextNode("Add more"); 
-             backBtn.setAttribute("Id", "backBtn")      
-             backBtn.appendChild(btnText); 
-             backBtn.onclick =  function show() {
-              document.getElementById('zone').classList.remove('hide');
-              document.getElementById("myGardenResults").classList.add('hide');
-              //document.getElementById('plantResults').classList.remove('hide');
-              var p = document.getElementById("backBtn");
-              p.remove(p.selectedIndex);
+    gardenList.appendChild(x);
+  }
 
-              var z = document.getElementById("refreshBtn");
-              z.remove(z.selectedIndex);
+  let backBtn = document.createElement("BUTTON");
+  let btnText = document.createTextNode("Add more");
+  backBtn.setAttribute("Id", "backBtn")
+  backBtn.appendChild(btnText);
+  backBtn.onclick = function show() {
+    document.getElementById('zone').classList.remove('hide');
+    document.getElementById("myGardenResults").classList.add('hide');
+    //document.getElementById('plantResults').classList.remove('hide');
+    var p = document.getElementById("backBtn");
+    p.remove(p.selectedIndex);
 
-              var t = document.getElementById("gardenBtn");
-              t.remove(t.selectedIndex);
+    var z = document.getElementById("refreshBtn");
+    z.remove(z.selectedIndex);
 
-            }
-             //backBtn.addEventListener('click', show);
-                             
-             document.body.appendChild(backBtn);
+    var t = document.getElementById("gardenBtn");
+    t.remove(t.selectedIndex);
 
-             //create reset button
-             let refreshBtn = document.createElement("BUTTON");       
-            let refreshText = document.createTextNode("Reset myGarden!"); 
-             refreshBtn.setAttribute("Id", "refreshBtn");      
-             refreshBtn.appendChild(refreshText); 
-             refreshBtn.onclick = function resetGarden() {
-               myGarden = [];
-               var foo = document.getElementById("myGardenResults");
-        while (foo.firstChild) {
-          foo.removeChild(myGardenResults.firstChild);
-        }
+  }
+  //backBtn.addEventListener('click', show);
 
-             }
-             document.body.appendChild(refreshBtn);
-             
+  document.body.appendChild(backBtn);
+
+  //create reset button
+  let refreshBtn = document.createElement("BUTTON");
+  let refreshText = document.createTextNode("Reset myGarden!");
+  refreshBtn.setAttribute("Id", "refreshBtn");
+  refreshBtn.appendChild(refreshText);
+  refreshBtn.onclick = function resetGarden() {
+    myGarden = [];
+    var foo = document.getElementById("myGardenResults");
+    while (foo.firstChild) {
+      foo.removeChild(myGardenResults.firstChild);
+    }
+  }
+  document.body.appendChild(refreshBtn);
+
 }
 
- 
+
 
 // //returns today's day of year from 1-365
 //function TodayDayOfYear() {
