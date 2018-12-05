@@ -95,6 +95,16 @@ function loadJSON() {
             }                              
             document.body.appendChild(btn); 
             console.log(myGarden); 
+
+            var showGarden = document.createElement("BUTTON");       
+            var gardenText = document.createTextNode("Add to my Garden"); 
+            showGarden.setAttribute("Id", "showGarden")      
+            showGarden.appendChild(gardenText);  
+            //add produce item to garden array onclick
+            showGarden.onclick = function showMyGarden(){
+            window.location='http://www.mindystrong.github.io/portfolio/gardening/results.html';
+            }                              
+            document.body.appendChild(showGarden); 
           }
 
           function getDaysUntilPlant() {
