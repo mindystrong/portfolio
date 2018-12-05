@@ -7,7 +7,7 @@ function loadJSON() {
   request.open('GET', url, true);
 
   request.onload = function createZoneOptions() {
-
+    let myGarden = [];
     //parse data from JSON file
     if (request.status === 200) {
       const data = JSON.parse(request.responseText);
@@ -51,13 +51,17 @@ function loadJSON() {
       plantNow.addEventListener('click', renderProduceInfo);
 
       function renderProduceInfo(plantFrost) {
-
+        
         //remove previous produce list item
         var root = document.getElementById("plantResults");
         while (plantResults.firstChild) {
           root.removeChild(plantResults.firstChild);
-        }
 
+          //remove existing add to garden button
+          var x = document.getElementById("gardenBtn");
+          x.remove(x.selectedIndex);
+        }
+        
         //get the value of the current produce user selection
         let currentProduce = document.getElementById('produceList').value;
         //match user selection with produce name
@@ -77,6 +81,20 @@ function loadJSON() {
             <p>Soil pH: ${data.produce[k].soilpH}</p>
             `;
             produceList.appendChild(item);
+
+            //create add to garden button
+            var btn = document.createElement("BUTTON");       
+            var t = document.createTextNode("Add to my Garden"); 
+            btn.setAttribute("Id", "gardenBtn")      
+            btn.appendChild(t);  
+            //add produce item to garden array onclick
+            btn.onclick = function alert(){
+              //push produce into myGarden array
+              myGarden.push(data.produce[k]);
+              window.alert(data.produce[k].name + ' is added to your garden');
+            }                              
+            document.body.appendChild(btn); 
+            console.log(myGarden); 
           }
 
           function getDaysUntilPlant() {
