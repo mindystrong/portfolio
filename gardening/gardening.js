@@ -141,6 +141,9 @@ function loadJSON() {
 
                 //subtract today from the plant day of year and return
                 let daysUntilPlant = parseInt(plantDayOfYear) - today;
+                if (daysUntilPlant < 0) {
+                  daysUntilPlant += 365;
+                }
                 return daysUntilPlant;
               }
             }
@@ -154,13 +157,11 @@ function loadJSON() {
 
 
 function displayGarden() {
+  
  
   var roo = document.getElementById("plantResults");
         while (roo.firstChild) {
           roo.removeChild(plantResults.firstChild);
-
-
-        
         }
   document.getElementById("myGardenResults").classList.remove('hide');   
   var y = document.getElementById("showGarden");
@@ -187,12 +188,33 @@ function displayGarden() {
               //document.getElementById('plantResults').classList.remove('hide');
               var p = document.getElementById("backBtn");
               p.remove(p.selectedIndex);
+
+              var z = document.getElementById("refreshBtn");
+              z.remove(z.selectedIndex);
+
               var t = document.getElementById("gardenBtn");
               t.remove(t.selectedIndex);
+
             }
              //backBtn.addEventListener('click', show);
                              
              document.body.appendChild(backBtn);
+
+             //create reset button
+             let refreshBtn = document.createElement("BUTTON");       
+            let refreshText = document.createTextNode("Reset myGarden!"); 
+             refreshBtn.setAttribute("Id", "refreshBtn");      
+             refreshBtn.appendChild(refreshText); 
+             refreshBtn.onclick = function resetGarden() {
+               myGarden = [];
+               var foo = document.getElementById("myGardenResults");
+        while (foo.firstChild) {
+          foo.removeChild(myGardenResults.firstChild);
+        }
+
+             }
+             document.body.appendChild(refreshBtn);
+             
 }
 
  
