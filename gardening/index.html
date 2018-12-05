@@ -10,7 +10,7 @@
     <meta name="description" content="Challenge #2">
 </head>
 <body onload = "loadJSON()">
-
+        <div id="zone">
 <h1>Select Season</h1>
 <select id="seasonList" name="season">
 <option id="Spring">Spring</option>
@@ -19,17 +19,25 @@
 <option id="Winter">Winter</option>
 </select>
 
-<h1>Select Zone</h1>
+
+<h1>Select Zone</h><br>
 <select id="zoneList" name="zone"></select>
 
 <h1>Select Produce</h1>
 <select id="produceList" name="produce"></select><br>
 
 <button id="plantNowBtn">plantNow!</button>
+</div>
 
 <ul id = "plantResults"></ul> 
 
 <ul id = "myGardenResults"></ul> 
+
+<style>
+    .hide {
+        display: none;
+    }
+</style>
 
 <script src="gardening.js"></script>
    
