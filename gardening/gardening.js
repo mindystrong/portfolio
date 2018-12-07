@@ -161,19 +161,19 @@ function loadJSON() {
 
 function displayGarden() {
 //remove existing plantNow! result
-  var roo = document.getElementById("plantResults");
-  while (roo.firstChild) {
-    roo.removeChild(plantResults.firstChild);
+  let bar = document.getElementById("plantResults");
+  while (bar.firstChild) {
+    bar.removeChild(plantResults.firstChild);
   }
   //hide myGarden! results
   document.getElementById("myGardenResults").classList.remove('hide');
 
   //remove existing visit myGarden! button
-  var y = document.getElementById("showGarden");
+  let y = document.getElementById("showGarden");
   y.remove(y.selectedIndex);
 
   //remove existing add to myGarden! button
-  var r = document.getElementById("gardenBtn");
+  let r = document.getElementById("gardenBtn");
   r.remove(r.selectedIndex);
 
   //hide all existing elements on page 
@@ -199,15 +199,15 @@ function displayGarden() {
     document.getElementById("myGardenResults").classList.add('hide');
 
     //remove add more button
-    var p = document.getElementById("backBtn");
+    let p = document.getElementById("backBtn");
     p.remove(p.selectedIndex);
 
     //remove reset myGarden! button
-    var z = document.getElementById("refreshBtn");
+    let z = document.getElementById("refreshBtn");
     z.remove(z.selectedIndex);
 
     //remove add to myGarden! button
-    var t = document.getElementById("gardenBtn");
+    let t = document.getElementById("gardenBtn");
     t.remove(t.selectedIndex);
 
   }
@@ -223,7 +223,7 @@ function displayGarden() {
   refreshBtn.onclick = function resetGarden() {
     //reset myGarden array onclick
     myGarden = [];
-    var foo = document.getElementById("myGardenResults");
+    let foo = document.getElementById("myGardenResults");
     //remove garden results list element children
     while (foo.firstChild) {
       foo.removeChild(myGardenResults.firstChild);
