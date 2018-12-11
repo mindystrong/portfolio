@@ -10,9 +10,10 @@
     <meta name="description" content="Challenge #2">
 </head>
 <body onload = "loadJSON()">
+    <h1 id="title">plantNow!</h1>
         <div id="zone">
                 
-<h1>1. Select Season</h1>
+<h2>1. Select Season</h2>
 
 <select id="seasonList" name="season">
 <option id="Spring">Spring</option>
@@ -23,12 +24,12 @@
 
 
 
-<h1>2. Select Zone</h><br>
+<h2>2. Select Zone</h2><br>
     <div class="select-style">   
 <select id="zoneList" name="zone"></select>
 </div>
     
-<h1>3. Select Produce</h1>
+<h2>3. Select Produce</h2>
 <div class="select-style">  
 <select id="produceList" name="produce"></select><br>
 </div>
@@ -71,7 +72,9 @@ select#zoneList, select#seasonList, select#produceList {
    border-radius: 20px;
    padding-left: 15px;
 }
-   
+   h1#title {
+       display: block;
+   }
     .hide {
         display: none;
     }
