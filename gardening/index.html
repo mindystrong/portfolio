@@ -31,12 +31,13 @@
 <select id="produceList" name="produce"></select><br>
 
 
-<button id="plantNowBtn">plantNow!</button>
+<button id="plantNowBtn" href="#myGardenResults">plantNow!</button>
 </div>
 
 <ul id = "plantResults"></ul> 
 
 <ul id = "myGardenResults"></ul> 
+<a name="gardenAnchor"></a>
 
 <style>
     select#zoneList, select#seasonList, select#produceList {
@@ -98,7 +99,6 @@ select#zoneList, select#seasonList, select#produceList {
         background-image: url('background-table copy.jpg');
         background-position: center;
     background-repeat: repeat;
-    background-size: cover;
     background-attachment: fixed;
     
     }
@@ -127,6 +127,27 @@ select#zoneList, select#seasonList, select#produceList {
       height: auto;
       padding-block-end: 5px;
       padding-block-start: 5px;
+    }
+
+    #backBtn, #refreshBtn {
+        border: 1px solid #AAA;
+       background-color: rgba(1, 7, 1, 0.596);
+       color: white;
+       border-radius: 20px;
+      
+       font-size: 20px;
+       font-family: 'Nothing You Could Do', cursive;
+       margin-top: 30px;
+       padding-top: 5px;
+       padding-bottom: 5px;
+       display: block;
+      width: 100%;
+      height: auto;
+      padding-block-end: 5px;
+      padding-block-start: 5px;
+      position: absolute;
+      bottom: 10px;
+
     }
     
     
