@@ -55,22 +55,20 @@ function loadJSON() {
       function renderProduceInfo(plantFrost) {
 
         //remove previous produce list item
-        var root = document.getElementById("plantResults");
-        while (root.firstChild) {
-          root.removeChild(plantResults.firstChild);
+        let q = document.getElementById("plantResults");
+        while (q.firstChild) {
+          q.removeChild(plantResults.firstChild);
 
           //remove existing add to myGarden! button
-          var x = document.getElementById("gardenBtn");
+          let x = document.getElementById("gardenBtn");
           x.remove(x.selectedIndex);
 
           //remove visit myGarden! button
-          var y = document.getElementById("showGarden");
+          let y = document.getElementById("showGarden");
           y.remove(y.selectedIndex);
 
 
         }
-
-
         //get the value of the current produce user selection
         let currentProduce = document.getElementById('produceList').value;
         //match user selection with produce name
@@ -92,8 +90,8 @@ function loadJSON() {
             produceList.appendChild(item);
 
             //create add to myGarden! button
-            var btn = document.createElement("BUTTON");
-            var t = document.createTextNode("Add to myGarden!");
+            let btn = document.createElement("BUTTON");
+            let t = document.createTextNode("Add to myGarden!");
             btn.setAttribute("Id", "gardenBtn")
             btn.appendChild(t);
             //add produce item to garden array onclick
@@ -107,8 +105,8 @@ function loadJSON() {
             document.body.appendChild(btn);
 
 
-            var showGarden = document.createElement("BUTTON");
-            var gardenText = document.createTextNode("Visit myGarden!");
+            let showGarden = document.createElement("BUTTON");
+            let gardenText = document.createTextNode("Visit myGarden!");
             showGarden.setAttribute("Id", "showGarden")
             showGarden.appendChild(gardenText);
             //display garden onclick                        
@@ -122,11 +120,11 @@ function loadJSON() {
             let currentZone = document.getElementById("zoneList").value;
 
             //get today's day of year
-            var now = new Date();
-            var start = new Date(now.getFullYear(), 0, 0);
-            var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-            var oneDay = 1000 * 60 * 60 * 24;
-            var today = Math.floor(diff / oneDay);
+            let now = new Date();
+            let start = new Date(now.getFullYear(), 0, 0);
+            let diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+            let oneDay = 1000 * 60 * 60 * 24;
+            let today = Math.floor(diff / oneDay);
 
             //match user zone selection with zones in JSON object
             for (let z = 0; z < data.zones.length; z++) {
@@ -161,9 +159,9 @@ function loadJSON() {
 
 function displayGarden() {
 //remove existing plantNow! result
-  let bar = document.getElementById("plantResults");
-  while (bar.firstChild) {
-    bar.removeChild(plantResults.firstChild);
+  let b = document.getElementById("plantResults");
+  while (b.firstChild) {
+    b.removeChild(plantResults.firstChild);
   }
   //hide myGarden! results
   document.getElementById("myGardenResults").classList.remove('hide');
@@ -192,7 +190,7 @@ function displayGarden() {
   let btnText = document.createTextNode("Add more");
   backBtn.setAttribute("Id", "backBtn");
   backBtn.appendChild(btnText);
-  
+
   backBtn.onclick = function show() {
     //unhide page elements onclick and hide myGarden! results
     document.getElementById('zone').classList.remove('hide');
@@ -223,10 +221,10 @@ function displayGarden() {
   refreshBtn.onclick = function resetGarden() {
     //reset myGarden array onclick
     myGarden = [];
-    let foo = document.getElementById("myGardenResults");
+    let a = document.getElementById("myGardenResults");
     //remove garden results list element children
-    while (foo.firstChild) {
-      foo.removeChild(myGardenResults.firstChild);
+    while (a.firstChild) {
+      a.removeChild(myGardenResults.firstChild);
     }
   }
   //add reset myGarden button to page
