@@ -1,48 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mindy Strong Portfolio</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Mindy Strong">
+    <meta name="description" content="portfolio">
+</head>
+<body>
+   <header>Mindy Strong Portfolio</header>
+   <nav>
+       <p><a href="/csa/index.html" title="csa application">Challenges #1</a></p>
+       <p><a href="/gardening/index.html" title="gardening application">Challenges #2</a></p>
+       <p><a href="/Eloquent Javascript Examples.html" title="examples">Eloquent JavaScript Examples</a></p>
+       
+   </nav>
+</body>
 
 
 
-
-<script>
-const routes = [
-{file: 'view/hikes.html', label: 'hiking'},
-{file: 'view/parks.html', label: 'parks'},
-];
-
-export default function buildNavigation(parent) {
-routes.forEach((route) => {
-let item = document.createElement('li');
-item.innerHTML  = `<a href='#'>${route.label}</a>`;
-parent.appendChild(item);
-addNavEvent(item, route.file);
-});
-}
-
-// makes an AJAX request for the html file found at viewPath and returns it as text
-function getView(viewpath) {
-return fetch(viewPath).then((response) => {
-    return response.text();
-})
-.catch (err => {
-    console.log('Something went wrong', err);
-});
-}
-
-// adds a touchend event to element that will insert the view found at path into the content area of the index.html
-function addNavEvent(element, path) {
-
-element.addEventListener('touchend', (e) => {
-    insertView(getView(path))
-})
-}
-
-// inserts the view into the content area of index.html
-function insertView(viewPromise) {
-const contentElement = document.getElementbyId('content');
-viewPromise.then((data) => {
-contentElement.innerHTML(data);
-});
-}
-
-</script>
-
-
+</html> 
