@@ -14,30 +14,20 @@
         <div id="zone">
                 
 <h2>1. Select Season</h2>
-
 <select id="seasonList" name="season">
 <option id="Spring">Spring</option>
 <option id="Summer">Summer</option>
 <option id="Fall">Fall</option>
 <option id="Winter">Winter</option>
 </select>
-
-
-
 <h2>2. Select Zone</h2>    
 <select id="zoneList" name="zone"></select>   
 <h2>3. Select Produce</h2>
- 
 <select id="produceList" name="produce"></select><br>
-
-
 <button id="plantNowBtn" href="#myGardenResults">plantNow!</button>
 </div>
-
 <ul id = "plantResults"></ul> 
-
 <ul id = "myGardenResults"></ul> 
-<a name="gardenAnchor"></a>
 
 <style>
     select#zoneList, select#seasonList, select#produceList {
@@ -112,23 +102,6 @@ select#zoneList, select#seasonList, select#produceList {
 
     }
 
-    @media only screen and (max-width: 500px) {
-        #plantNowBtn, #gardenBtn, #showGarden {
-      display: block;
-      width: 100%;
-      height: auto;
-      padding-block-end: 5px;
-      padding-block-start: 5px;
-    }
-
-    select#zoneList, select#seasonList, select#produceList {
-        display: block;
-      width: 100%;
-      height: auto;
-      padding-block-end: 5px;
-      padding-block-start: 5px;
-    }
-
     #backBtn, #refreshBtn {
         border: 1px solid #AAA;
        background-color: rgba(1, 7, 1, 0.596);
@@ -147,6 +120,25 @@ select#zoneList, select#seasonList, select#produceList {
       padding-block-start: 5px;
 
     }
+    
+
+    @media only screen and (max-width: 500px) {
+        #plantNowBtn, #gardenBtn, #showGarden {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding-block-end: 5px;
+      padding-block-start: 5px;
+    }
+
+    select#zoneList, select#seasonList, select#produceList {
+        display: block;
+      width: 100%;
+      height: auto;
+      padding-block-end: 5px;
+      padding-block-start: 5px;
+    }
+
     
     
 </style>

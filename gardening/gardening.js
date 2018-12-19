@@ -1,3 +1,4 @@
+//initialize myGarden!
 let myGarden = [];
 
 function loadJSON() {
